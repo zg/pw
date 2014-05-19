@@ -4,7 +4,7 @@
 <title>Password Generator</title>
 <style type="text/css"><!--input#new_password{font-family:courier}--></style>
 <script type="text/javascript" src="jquery.min.js"></script>
-<script type="text/javascript">$(function(){$('input[class^="password_"]').each(function(){$(this).attr({width:'auto',size:$(this).val().length})});$('input[class^="password_"]').live('focus,click',function(){$(this).select()})})</script>
+<script type="text/javascript">$(function(){$('input[class^="password_"]').each(function(){$(this).attr({width:'auto',size:$(this).val().length})});$('input[class^="password_"]').on({click:function(){$(this).select()},focus:function(){$(this).select()},mouseup:function(e){e.preventDefault()}})})</script>
 </head>
 <body>
 <h2>Password Generator</h2>
